@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Edition | Raphael rocks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #b08d57;
+            --bg: #fdfcf8;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid #ddd;
+            background: var(--white);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .edition-header {
+            text-align: center;
+            padding: 5rem 5% 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .edition-number {
+            font-weight: bold;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 1rem 0;
+        }
+
+        .magazine-viewer {
+            max-width: 1100px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+            text-align: center;
+        }
+
+        
+        .canva-frame {
+            position: relative;
+            width: 100%;
+            max-width: 500px; 
+            margin: 0 auto 2rem;
+            padding-top: 650px;
+            background: #eee;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .canva-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .pdf-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pdf-button:hover {
+            opacity: 0.9;
+        }
+
+        .edition-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            border-top: 1px solid #ddd;
+            padding-top: 3rem;
+        }
+
+        .detail-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .edition-details { grid-template-columns: 1fr; }
+            .canva-frame { max-width: 100%; padding-top: 130%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Raphael Rocks</a>
+        <div class="nav-links">
+            <a href="index.html" style="text-decoration: none; color: var(--primary); font-size: 0.9rem; margin-left: 20px;">News</a>
+            <a href="sources.html" style="text-decoration: none; color: var(--primary); font-size: 0.9rem; margin-left: 20px;">Sources</a>
+        </div>
+    </nav>
+
+    <header class="edition-header">
+        <span class="edition-number">Volume 01 • Issue 01</span>
+        <h1>The High Renaissance</h1>
+        <p>A digital showcase of our premier edition, exploring the early works and the Umbrian influence on Raphael's style.</p>
+    </header>
+
+    <section class="magazine-viewer">
+        <div class="canva-frame">
+            <iframe loading="lazy" 
+                src="https://www.canva.com/design/DAG9vkeYQHY/ZfGym7s1am535_5nHoj6bg/view?embed" 
+                allowfullscreen="allowfullscreen" allow="fullscreen">
+            </iframe>
+        </div>
+
+        <a href="pdf/raphael.pdf" target="_blank" class="pdf-button">
+            Open Full PDF Edition
+        </a>
+    </section>
+
+    <section class="edition-details">
+        <div class="detail-box">
+            <h3>Featured Story</h3>
+            <p>A deep dive into the <em>Marriage of the Virgin</em> and the transition from Perugino’s shadow.</p>
+        </div>
+        <div class="detail-box">
+            <h3>Print Quality</h3>
+            <p>Printed on 120gsm archival parchment with gold-leaf detailing for physical subscribers.</p>
+        </div>
+        <div class="detail-box">
+            <h3>Contributors</h3>
+            <p>Essays by leading Renaissance historians and exclusive photography from the Vatican archives.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Raphael Rocks Publishing Co. | All Rights Reserved.</p>
+        <p>All text and info was not written by me.</p>
+        <p>All images used on newspaper have connected links on the Canva project page.</p>
+        <a href="pdf/raphael.pdf" target="_blank" rel="noopener">Open PDF Viewer</a>
+    </footer>
+
+</body>
+</html>

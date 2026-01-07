@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Rocks | Renaissance News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #b08d57; 
+            --bg: #fdfcf8;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid #ddd;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 4rem 5%;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                        url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1000'); /* Placeholder art texture */
+            background-size: cover;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 0;
+            color: var(--primary);
+        }
+
+        .date {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-story {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            margin-top: 4rem;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"> Raphael Rocks</div>
+        <div class="nav-links">
+            <a href="sources.html">Sources</a>
+            <a href="first.html">First Edition</a>
+            <a href="#">Print Edition</a>
+            <a href="#">Subscribe</a>
+        </div>
+    </nav>
+
+    <header>
+        <p class="date">Wednesday, January 7, 2026</p>
+        <h1>Mastery in Picture</h1>
+        <p>Exploring the divine proportions and lasting legacy of Raffaello Sanzio.</p>
+    </header>
+
+    <main class="container">
+        <section class="main-story">
+            <img src="data:image/jpeg;base64,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" alt="Classical Art" class="featured-img">
+            <h2>The Stanze di Raffaello: A New Perspective</h2>
+            <p>Recent restoration efforts in the Vatican have revealed previously obscured details in the "School of Athens." Our experts break down what this means for 16th-century art history...</p>
+            <button class="btn">Read Full Report</button>
+        </section>
+
+        <aside class="sidebar">
+            <div class="card">
+                <p class="date" style="font-size: 0.6rem;">Exclusive Interview</p>
+                <h3>The "Madonnas" Collection</h3>
+                <p>How Raphael captured human emotion unlike any other artist of his era.</p>
+            </div>
+            <div class="card">
+                <p class="date" style="font-size: 0.6rem;">Market Watch</p>
+                <h3>Auction Records</h3>
+                <p>Rare sketch sells for record-breaking sum in London auction house.</p>
+            </div>
+            <div class="card" style="background: #f4f1ea;">
+                <h3>Get Daily Prints</h3>
+                <p>Join 50,000 art enthusiasts. Delivered to your doorstep weekly.</p>
+                <button class="btn" style="width: 100%;">Subscribe Now</button>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Raphael Rocks Publishing Co. | All Rights Reserved.</p>
+        <p>all text and info wasnt written by me </p>
+    </footer>
+
+</body>
+</html>
